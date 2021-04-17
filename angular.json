@@ -26,6 +26,11 @@
                 "output": "assets"
               },
               {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              },
+              {
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
@@ -102,6 +107,11 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "/assets"
+              },
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
               }
             ]
           },
@@ -115,10 +125,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "e2e": {
@@ -199,9 +206,7 @@
           "options": {
             "browserTarget": "app:build:production",
             "serverTarget": "app:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}
